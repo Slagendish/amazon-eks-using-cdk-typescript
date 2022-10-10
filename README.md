@@ -15,11 +15,13 @@ git clone https://github.com/aws-samples/amazon-eks-using-cdk-typescript.git
 # install dependant packages
 npm install
 # If you have not used cdk before, you may be advised to create cdk resources
-cdk bootstrap aws://ACCOUNT_ID/REGION
+cdk bootstrap aws://885255641954/eu-central-1
 # check the diff before deployment to understand any changes, on first run all resources will created
 cdk diff
 # Deploy the stack, you will be prompted for confirmation for creation of IAM and Security Group resources
-cdk -c cluster_name=myfirstcluster deploy --all
+cdk -c cluster_name=sandbox deploy --all
+
+cdk destroy -c cluster_name=sandbox --all
 
 ```
 

@@ -28,17 +28,17 @@ export class K8snodegroups extends cdk.Stack {
     const nodegroupMin = new CfnParameter(this, 'nodegroupMin', {
       type: 'Number',
       description: 'Min number of EKS worker nodes to scale down to',
-      default: 2,
+      default: 1,
     });
     const nodeType = new CfnParameter(this, 'nodegroupInstanceType', {
       type: 'String',
-      description: 'Instance Type to be used with nodegroup ng-1',
-      default: 't3.medium',
+      description: 'Instance Type to be used with nodegroup ng-1. See https://aws.amazon.com/fr/ec2/pricing/on-demand/',
+      default: 't4g.small',
     });
     const nodeAMIVersion = new CfnParameter(this, 'nodeAMIVersion', {
       type: 'String',
-      default: '1.21.2-20210722',
-      description: 'AMI version used for EKS Worker nodes https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html',
+      default: '1.23.9-20220926',
+      description: 'AMI version used for EKS Worker nodes https://github.com/awslabs/amazon-eks-ami/blob/master/CHANGELOG.md',
     });
 
     const userdataCommands = UserData.forLinux();

@@ -1,15 +1,15 @@
 {
   "app": "npx ts-node --prefer-ts-exts bin/eks-cdk-js.ts",
   "context": {
-    "eks-addon-vpc-cni-version": "v1.7.5-eksbuild.2",
-    "eks-addon-kube-proxy-version": "v1.21.2-eksbuild.2",
-    "eks-addon-coredns-version": "v1.8.4-eksbuild.1",
-    "cluster-autoscaler-helm-version": "9.10.3",
-    "aws-load-balancer-controller-helm-version": "1.2.3",
+    "eks-addon-vpc-cni-version": "v1.11.4-eksbuild.1", //https://docs.aws.amazon.com/eks/latest/userguide/managing-vpc-cni.html
+    "eks-addon-kube-proxy-version": "v1.23.8-eksbuild.2", //https://docs.aws.amazon.com/eks/latest/userguide/managing-kube-proxy.html
+    "eks-addon-coredns-version": "v1.8.7-eksbuild.2", //https://docs.aws.amazon.com/eks/latest/userguide/managing-coredns.html
+    "cluster-autoscaler-helm-version": "9.21.0", //https://artifacthub.io/packages/helm/cluster-autoscaler/cluster-autoscaler
+    "aws-load-balancer-controller-helm-version": "1.2.3", //https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/
     "aws-ebs-csi-driver-helm-version": "2.0.4",
     "aws-efs-csi-driver-helm-version": "2.1.4",
     "secrets-store-csi-helm-version": "0.1.0",
     "aws-calico-helm-version": "0.3.5",
-    "cluster_name" : "myfirstcluster"
+    "cluster_name" : "prim-cluster"
   }
 }

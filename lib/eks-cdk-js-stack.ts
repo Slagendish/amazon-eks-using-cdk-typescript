@@ -28,7 +28,7 @@ export class Ekstack extends cdk.Stack {
     const k8sversion = new CfnParameter(this, 'k8sVersion', {
       type: 'String',
       description: 'K8s Version',
-      default: '1.21',
+      default: '1.23',
     });
     // https://github.com/aws/aws-cdk/issues/4159
     // https://aws.github.io/aws-eks-best-practices/security/docs/detective/#enable-audit-logs
